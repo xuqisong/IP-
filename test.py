@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
 
-proxy = requests.get('http://119.101.117.86:9999/get').text
+proxy = requests.get('http://127.0.0.1:5000/get').text
 print('Get proxy from API: {}'.format(proxy))
 proxies = {'http': 'http://{}'.format(proxy), 'https': 'http://{}'.format(proxy)}
 response = requests.get(url='https://httpbin.org/ip', proxies=proxies)
